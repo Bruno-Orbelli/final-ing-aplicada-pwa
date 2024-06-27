@@ -1,0 +1,8 @@
+{
+  "name": "final_ing_aplicada_pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "8cfd0de0"
+}
