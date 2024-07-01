@@ -1,0 +1,13 @@
+.total-revenue-item {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .total-revenue-text {
+    font-size: 10em;
+    font-weight: bold;
+  }
+  
+  .revenue-amount {
+    color: green;
+  }  
