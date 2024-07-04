@@ -16,7 +16,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,png,jpg,svg,webp}'],
         runtimeCaching: [{
           urlPattern: ({ url }) => {
-            const allowedPathnames = ['/sale-statistics', '/stock-warnings', '/api/products', '/api/order-dets', '/api/orders'];
+            const allowedPathnames = ['/api/products', '/api/order-dets', '/api/orders'];
             return allowedPathnames.some(allowedPathname => url.pathname === allowedPathname)
           },
           handler: "NetworkFirst" as const,

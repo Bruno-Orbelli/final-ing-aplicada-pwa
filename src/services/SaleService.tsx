@@ -21,13 +21,12 @@ export const getSaleItems = async (token: string) => {
     return [];
   }
   for (const item of orderDetails.data) {
-    if (quantities[item.id]) {
+    if (quantities[item.product.productName]) {
       quantities[item.product.productName] += item.quantity;
     } else {
       quantities[item.product.productName] = item.quantity;
     }
   }
-  console.log(quantities);
   const products = await axios.get("http://localhost:8080/api/products", {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -47,7 +46,6 @@ export const getSaleItems = async (token: string) => {
     };
     saleItems.push(saleItem);
   }
-  console.log(saleItems);
   return saleItems;
 };
   
